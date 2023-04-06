@@ -1,5 +1,5 @@
 from flask import Flask, request
-import datetime
+
 
 app = Flask(__name__)
 
@@ -17,7 +17,6 @@ def create_student():
   skills = request.form['skills'].split(', ')
   bio = request.form['bio']
   birthyear = request.form['birthyear']
-  created_at = datetime.now()
   details = {
     'name': name,
     'country': country,
@@ -25,7 +24,6 @@ def create_student():
     'birthyear': birthyear,
     'skills': skills,
     'bio': bio,
-    'created_at': created_at,
   }
   student.append(details)
   return details
