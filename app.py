@@ -1,10 +1,10 @@
 from flask import Flask
 import requests
-# import os
+
 
 app = Flask(__name__)
 
-COINCAP_URL = 'https://api.coincap.io/v2/assets/bitcoins'
+COINCAP_URL = 'https://api.coincap.io/v2/assets/bitcoin'
 
 @app.get("/crypto")
 def crypto():
